@@ -2,11 +2,11 @@ import { createThirdwebClient, defineChain, getContract } from "thirdweb";
  
 const CLIENT_ID= process.env.NEXT_PUBLIC_CLIENT_ID;
 
-const client = createThirdwebClient({
+export const client = createThirdwebClient({
   clientId: CLIENT_ID as string,
 });
 
-const DeplymentChain = defineChain(84532);
+export const deploymentChain = defineChain(84532);
 
 const contractAddress="0x51E31B140412651c3a8d43029e30fBaF16589650"
 
@@ -84,9 +84,9 @@ const contractABI=[
   }
 ] as const
 
-const contract = getContract({
+export const contract = getContract({
   client: client,
-  chain: DeplymentChain,
+  chain: deploymentChain,
   address: contractAddress,
   abi: contractABI,
 });
