@@ -1,12 +1,12 @@
-import { Login } from "@/components/providers/auth/Login";
-import Image from "next/image";
+import { Navbar } from "@/components/common/Navbar";
 
 export default function Home() {
   return (
-    <main>
-      <div>
-        <Login/>
+    <div>
+      <Navbar/>
+      <div className="gap-9 p-9 mt-10">
+        Qanding
       </div>
-    </main>
+    </div>
   );
 }
