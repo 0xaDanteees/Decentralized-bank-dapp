@@ -85,7 +85,7 @@ const contractABI=[
 ] as const
 
 const contract = getContract({
-  client,: client,
+  client: client,
   chain: DeplymentChain,
   address: contractAddress,
   abi: contractABI,
