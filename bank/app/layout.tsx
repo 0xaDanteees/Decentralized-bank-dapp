@@ -10,6 +10,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Orias Bank",
   description: "Decentralized Bank",
+  icons: {
+    icon: "/OriasLogo.png",
+  },
 };
 
 export default function RootLayout({
