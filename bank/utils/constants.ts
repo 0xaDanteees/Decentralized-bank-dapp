@@ -8,7 +8,7 @@ export const client = createThirdwebClient({
 
 export const deploymentChain = defineChain(84532);
 
-const contractAddress="0x51E31B140412651c3a8d43029e30fBaF16589650"
+const contractAddress="0x000913a098c702feF001Be4E186f80AA15CD1b3e"
 
 const contractABI=[
   {
@@ -17,6 +17,25 @@ const contractABI=[
     "inputs": [],
     "outputs": [],
     "stateMutability": "payable"
+  },
+  {
+    "type": "function",
+    "name": "balances",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
   },
   {
     "type": "function",
@@ -84,7 +103,7 @@ const contractABI=[
   }
 ] as const
 
-export const contract = getContract({
+export const CONTRACT = getContract({
   client: client,
   chain: deploymentChain,
   address: contractAddress,

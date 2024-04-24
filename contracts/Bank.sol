@@ -11,7 +11,8 @@ pragma solidity ^0.8.9;
 */
 
 contract Bank {
-    mapping(address=>uint) private balances;
+    //getBalance wouldnt work on thirdweb, made this public
+    mapping(address=>uint) public balances;
 
     fallback() external payable {
         balances[msg.sender]+=msg.value;
@@ -21,8 +22,8 @@ contract Bank {
     balances[msg.sender] += msg.value;
     }
 
-    function getBalance() view external returns (uint) {
-        return(balances[msg.sender]);
+    function getBalance() external view returns (uint) {
+        return balances[msg.sender];
     }
 
     function deposit(address _receiver) payable external {
