@@ -5,14 +5,14 @@ import { ConnectButton, useActiveAccount } from "thirdweb/react"
 
 export const Login =()=>{
     const { resolvedTheme } = useTheme();
-
+    const theme = resolvedTheme === "light" || resolvedTheme === "dark" ? resolvedTheme : "light";
     return(
 
         <div className=" items-center justify-center flex">
             <ConnectButton 
                 client={client}
                 chain={deploymentChain}
-                theme={resolvedTheme}
+                theme={theme}
                 connectModal={{
                     size: "compact",
                     title: "Orias Bank",
