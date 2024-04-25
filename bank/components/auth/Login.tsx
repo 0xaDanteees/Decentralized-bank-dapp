@@ -1,3 +1,4 @@
+"use client"
 import {client, deploymentChain } from "@/utils/constants"
 import { useTheme } from "next-themes";
 import { ConnectButton, useActiveAccount } from "thirdweb/react"
